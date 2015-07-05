@@ -41,7 +41,7 @@ class ContactListener
      */
     public function onContactCreatedEvent(ContactEvent $contactEvent)
     {
-        $to      = "jorgo@miridis.com";
+        $to      = "mayela@miridis.com";
         $contact = $contactEvent->getContact();
         $subject =  sprintf("Contact-Request from: %s", $contact->getName());
 

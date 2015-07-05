@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Mayela Miridis{% if page_title is defined %} - {{ page_title }}{% endif %}{% endblock %}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    {% include "AppBundle::stylesheets.html.twig" %}
+    <style>
+        div.error-template { padding: 50px; }
+        div.error-details { font-size: 2em; margin: 20px; }
+    </style>
+
+</head>
+<body>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-12">
+            <div class="error-template">
+                <h1>Oops!</h1>
+
+                <div class="error-details">
+                    Sorry, an error has occured !
+                </div>
+
+                <div class="error-actions">
+                    <a class="btn btn-primary btn-lg" href="/"><span class="glyphicon glyphicon-home"></span>
+                        Take Me Home </a> <a class="btn btn-default btn-lg" href="{{ path('contact') }}"><span class="glyphicon glyphicon-envelope"></span> Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

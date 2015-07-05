@@ -1,0 +1,13 @@
+services:
+    ####################################################################################################################
+    #  E V E N T   L I S T E N E R
+    ####################################################################################################################
+    app_bundle.contact.listener:
+        class: AppBundle\Listener\ContactListener
+        arguments:
+            em: @doctrine.orm.entity_manager
+            templating: @templating
+            mailer: @mailer
+            translator: @translator
+        tags:
+            - { name: kernel.event_listener, event: contact.event.created, method: onContactCreatedEvent }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Mayela Miridis{% if page_title is defined %} - {{ page_title }}{% endif %}{% endblock %}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    {% include "AppBundle::stylesheets.html.twig" %}
+    {% block stylesheets %}{% endblock %}
+
+    {% javascripts 'assets/vendor/jquery/dist/jquery.min.js' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% block javascripts %}{% endblock %}
+</head>
+
+<body>
+
+<div class="wrap">
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12"><img src="/images/header-mayela-miridis.png" style="margin: 0 auto; max-width: 100%;"></div>
+            </div>
+        </div>
+
+        <div class="motto-bar">
+            <div>
+                <div class="container motto">And the two became one</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="container">
+
+            {# include the menu and the page title on all pages but the home page #}
+            {% if app.request.requestUri|trim('/') != path('home')|trim('/') %}
+                {{ include('AppBundle::_menu.html.twig') }}
+                <h1>{{ page_title }}</h1>
+            {% endif %}
+
+            <div class="body">
+            {% block body %}{% endblock %}
+            </div>
+        </div>
+    </div>
+
+    <div class="footer container">
+        <div class="row">
+            <div class="col-xs-8 copyright">
+                &copy; COPYRIGHT 2013, e-Solutions S.C.
+            </div>
+            <div class="col-xs-4 text-right">
+                <div class="row">
+                    <div class="col-xs-10">&nbsp;</div>
+                    <div class="col-xs-1 button text-right">
+                        <a title="Skype" href="" class="social-button skype">&nbsp;</a>
+                    </div>
+                    <div class="col-xs-1 button text-right">
+                        <a title="Email" href="mailto:mayela@miridis.com" class="social-button email">&nbsp;</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

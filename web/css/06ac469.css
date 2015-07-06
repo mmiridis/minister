@@ -5848,6 +5848,14 @@ div.footer {
     display: none;
     background: transparent url(/images/social-icon-email.png) no-repeat; }
 
+h3.popover-title {
+  font-family: "univers-light-norma", sans-serif; }
+
+.popover-content {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  white-space: pre-line;
+  font-size: .95em; }
+
 div.menu {
   padding-top: 35px;
   text-align: center; }

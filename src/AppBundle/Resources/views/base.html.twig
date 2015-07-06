@@ -2,12 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% block title %}Mayela Miridis{% if page_title is defined %} - {{ page_title }}{% endif %}{% endblock %}</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
     {% include "AppBundle::stylesheets.html.twig" %}
     {% block stylesheets %}{% endblock %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/vendor/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="assets/vendor/Respond/dest/respond.min.js"></script>
+    <![endif]-->
 
     {% javascripts 'assets/vendor/jquery/dist/jquery.min.js' %}
     <script src="{{ asset_url }}"></script>

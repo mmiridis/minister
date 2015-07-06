@@ -15,8 +15,7 @@ security:
         in_memory:
             memory:
                 users:
-                    user:  { password: userpass, roles: [ 'ROLE_USER' ] }
-                    admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+                    admin: { password: %admin_passwd%, roles: [ 'ROLE_ADMIN' ] }
 
     # the main part of the security, where you can set up firewalls
     # for specific sections of your app
@@ -25,7 +24,11 @@ security:
         dev:
             pattern:  ^/(_(profiler|wdt)|css|images|js)/
             security: false
-        # the login page has to be accessible for everybody
+        backend:
+            pattern: ^/backend/
+            http_basic:
+                realm: "Backend Login"
+
         demo_login:
             pattern:  ^/demo/secured/login$
             security: false

@@ -5876,7 +5876,8 @@ div.menu {
           border-bottom: 1px solid #b76972; }
 
 div.home-img {
-  padding-top: 50px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
   div.home-img img {
     display: block;
     height: auto;

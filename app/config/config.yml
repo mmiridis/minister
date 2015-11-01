@@ -46,7 +46,7 @@ assetic:
     use_controller: false
     bundles:        [ AppBundle ]
     node:           p:\Development\nodejs\node
-    ruby:           p:\Development\Ruby22-x64\bin\ruby
+    ruby:           /opt/ruby/bin/ruby # p:\Development\Ruby22-x64\bin\ruby
     sass:           p:\Development\Ruby22-x64\bin\sass
     filters:
         cssrewrite: ~

@@ -91,7 +91,7 @@
         <div class="carousel-inner" role="listbox">
             {% for image in images %}
                 <div class="item{% if loop.index == 1 %} active{% endif %}">
-                    <img src="/images/gallery/{{ image.name }}" alt="{{ image.title }}" data-animation="animated fadeInLeft" />
+                    <img src="{{ asset('images/gallery/' ~ image.name) }}" alt="{{ image.title }}" data-animation="animated fadeInLeft" />
                 </div>
             {% endfor %}
         </div>

@@ -26,7 +26,7 @@ class SiteController extends Controller
     }
 
     /**
-     * @Route("/aboutMe", name="aboutMe")
+     * @Route("/about-me", name="aboutMe")
      */
     public function aboutMeAction()
     {

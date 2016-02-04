@@ -3,6 +3,22 @@
 {% set page_title = 'Testimonials' %}
 
 {% block body %}
+        <div class="testimonial row separator">
+            <div class="col-sm-3 col-md-3">
+                <div class="row center-block">
+                    <div class="col-xs-12 text-center">
+                        <img class="center-block" src="{{ asset('images/testimonials/sandra-aref.jpg') }}" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-8">
+                <div class="comment">Hace unos meses tuvimos la oportunidad de que fueras nuestra oficiante en nuestra boda, quería agradecerte la hermosa ceremonia que realizaste y hacerte saber lo feliz que me siento y lo bello que fue todo para todos, no hubo persona que no hablara de la hermosa ceremonia que realizaste, y mejor porque muchas de esas personas no conocían una boda cristiana.
+
+                    Muchas gracias por tu labor y muchas gracias por hacer ese momento más especial.
+                </div>
+                <div class="author">Sandra y Aref Nahle</div>
+            </div>
+        </div>
 
     {% for  i in range(1, 3)  %}
         <div class="testimonial row{% if not loop.last %} separator{% endif %}">
